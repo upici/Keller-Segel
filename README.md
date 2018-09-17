@@ -26,9 +26,6 @@ avec un coefficient de diffusion k. Le terme -\lambda c symbolise la dégradatio
 Le terme -\alpha\rho(t,x) représente la consommation du nutriment par les bactéries.
 Enfin, le terme f(t,x) est le terme source par lequel on vient apporter des nutriments.
 
-Ce système peut poser problème, notamment si on considère l'agrégation de bactéries, qui émettent elles-même
-l'espèce c (\alpha\rho positif).
-
 ## Première partie : recherche de resources, documentation
 
 1.  Commençons par l'équation portant sur c. Si on considère que \rho(t,x) est une donnée connue,
