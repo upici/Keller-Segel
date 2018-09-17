@@ -42,13 +42,13 @@ Enfin, le terme \(f(t,x)\) est le terme source par lequel on vient apporter des 
     Détailler le système d'équations que l'on doit résoudre à chaque pas de temps, 
     et les méthodes possibles pour le résoudre.
     La référence jointe au dépôt montre une méthode de résolution avancée, adaptée au fait que les bactéries *produisent*
-    l'espèce \(c\) ( \(+\lambda c\) ) et non la *consomment*, comme dans notre cas plus simple.
+    l'espèce c ( \(+\lambda c\) ) et non la *consomment*, comme dans notre cas plus simple.
 
 ## Deuxième partie : programmation dans un cas simplifié
 
 L'objectif est de bien comprendre l'implémentation des méthodes, avant de
 s'attaquer au problème complet. On s'intéressera à une seule des équations, 
-dans le domaine 1D \([0,1]\), en fixant l'autre inconnue à une valeur choisie (pas forcément constante).
+dans le domaine 1D [0,1], en fixant l'autre inconnue à une valeur choisie (pas forcément constante).
 
 1.  Détailler l'architecture du code à implémenter, en essayant d'avoir un code
     modulaire et extensible facilement. Entrées et sorties ? Structuration du
