@@ -12,7 +12,7 @@ L'équation de Keller-Segel modélise la chimiotaxie, à savoir le phénomène p
 cellules, etc.) se déplace en fonction des espèces chimiques qui l'environnent.
 <https://www.youtube.com/watch?v=ZUUfdP87Ssg>
 
-Cette équation est en fait un système de deux EDP couplées entre elles, décrivant la quantité de l'espèce biologique \(\rho(t,x)\) et la concentration d'espèce chimique \(c(t,x)\). Pour la suite, nous dirons que nous regardons des bactéries se dirigeant vers leur nutriment (du glucose par exemple).
+Cette équation est en fait un système de deux EDP couplées entre elles, décrivant la quantité de l'espèce biologique \rho(t,x) et la concentration d'espèce chimique c(t,x). Pour la suite, nous dirons que nous regardons des bactéries se dirigeant vers leur nutriment (du glucose par exemple).
 
 Les équations s'écrivent
 
@@ -20,15 +20,18 @@ Les équations s'écrivent
 
 \partial_t c(t,x) = k\Delta c -\lambda c -\alpha\rho(t,x) + f(t,x).
 
-La première équation traduit le fait que les bactéries se dirigent dans la direction privilégiée du gradient de \(c\), 
-avec le coefficient de chimiotaxie \(\chi\). La seconde équation traduit la diffusion du nutriment, 
-avec un coefficient de diffusion \(k\). Le terme \(-\lambda c\) symbolise la dégradation du glucose au cours du temps.
-Le terme \(-\alpha\rho(t,x)\) représente la consommation du nutriment par les bactéries.
-Enfin, le terme \(f(t,x)\) est le terme source par lequel on vient apporter des nutriments.
+La première équation traduit le fait que les bactéries se dirigent dans la direction privilégiée du gradient de c, 
+avec le coefficient de chimiotaxie \chi. La seconde équation traduit la diffusion du nutriment, 
+avec un coefficient de diffusion k. Le terme -\lambda c symbolise la dégradation du glucose au cours du temps.
+Le terme -\alpha\rho(t,x) représente la consommation du nutriment par les bactéries.
+Enfin, le terme f(t,x) est le terme source par lequel on vient apporter des nutriments.
+
+Ce système peut poser problème, notamment si on considère l'agrégation de bactéries, qui émettent elles-même
+l'espèce c (\alpha\rho positif).
 
 ## Première partie : recherche de resources, documentation
 
-1.  Commençons par l'équation portant sur \(c\). Si on considère que \(\rho(t,x)\) est une donnée connue,
+1.  Commençons par l'équation portant sur c. Si on considère que \rho(t,x) est une donnée connue,
     nous avons une équation parabolique linéaire, de la forme
 
     \partial_t u - \Delta u = s(t,x),
@@ -36,13 +39,14 @@ Enfin, le terme \(f(t,x)\) est le terme source par lequel on vient apporter des 
     Trouver et synthétiser de la documentation sur ce type d'équation dont il s'agit. Quelles conditions
     aux limites peut-on utiliser pour mettre en place notre boîte de Petri virtuelle?
 
-    On répètera ce travail pour l'équation sur \(\rho\) (type d'équation, conditions aux bords).
+    On répètera ce travail pour l'équation sur \rho (type d'équation, conditions aux bords).
 
-2.  Quels types de discrétisation en espace et quels schémas en temps peut-on envisager ?
+2.  Se documenter sur l'existence et le comportement des solutions du système.
+
+3.  Quels types de discrétisation en espace et quels schémas en temps peut-on envisager, 
+    en tenant compte des données \rho et c?
     Détailler le système d'équations que l'on doit résoudre à chaque pas de temps, 
     et les méthodes possibles pour le résoudre.
-    La référence jointe au dépôt montre une méthode de résolution avancée, adaptée au fait que les bactéries *produisent*
-    l'espèce c ( \(+\lambda c\) ) et non la *consomment*, comme dans notre cas plus simple.
 
 ## Deuxième partie : programmation dans un cas simplifié
 
@@ -69,7 +73,7 @@ place le lien entre les deux équations. Nous aurons donc deux inconnues par poi
     Que peut-on changer pour que cela ne soit pas pénalisant ?
 
 2.  Mettre en place un cas test qui illustrera en 1D le phénomène, en choisissant des conditions
-    initiales et une fonction \(f(t,x)\) appropriées.
+    initiales et une fonction f(t,x) appropriées. 
 
 3.  Produire le code de résolution du problème et le tester.
 
