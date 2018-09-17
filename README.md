@@ -16,9 +16,9 @@ Cette équation est en fait un système de deux EDP couplées entre elles, décr
 
 Les équations s'écrivent
 
-\(\partial_t\rho(t,x) = \mathop{div} (-\chi\rho(t,x)\nabla\c(t,x)),\) 
+\partial_t\rho(t,x) = \mathop{div} (-\chi\rho(t,x)\nabla\c(t,x)), 
 
-\(\partial_t c(t,x) = k\Delta c -\lambda c -\alpha\rho(t,x) + f(t,x)\).
+\partial_t c(t,x) = k\Delta c -\lambda c -\alpha\rho(t,x) + f(t,x).
 
 La première équation traduit le fait que les bactéries se dirigent dans la direction privilégiée du gradient de \(c\), 
 avec le coefficient de chimiotaxie \(\chi\). La seconde équation traduit la diffusion du nutriment, 
@@ -26,18 +26,12 @@ avec un coefficient de diffusion \(k\). Le terme \(-\lambda c\) symbolise la dé
 Le terme \(-\alpha\rho(t,x)\) représente la consommation du nutriment par les bactéries.
 Enfin, le terme \(f(t,x)\) est le terme source par lequel on vient apporter des nutriments.
 
-
-Pour ce type d'équation, les schémas volume finis sont assez simple à mettre en
-oeuvre, mais une discrétisation implicite en temps est nécessaire. La résolution
-fait donc intervenir une méthode de Newton et la résolution de systèmes
-linéaires. 
-
 ## Première partie : recherche de resources, documentation
 
 1.  Commençons par l'équation portant sur \(c\). Si on considère que \(\rho(t,x)\) est une donnée connue,
     nous avons une équation parabolique linéaire, de la forme
 
-    \(\partial_t u - \Delta u = s(t,x)\),
+    \partial_t u - \Delta u = s(t,x),
 
     Trouver et synthétiser de la documentation sur ce type d'équation dont il s'agit. Quelles conditions
     aux limites peut-on utiliser pour mettre en place notre boîte de Petri virtuelle?
