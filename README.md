@@ -48,7 +48,7 @@ Enfin, le terme f(t,x) est le terme source par lequel on vient apporter des nutr
 ## Deuxième partie : programmation dans un cas simplifié
 
 L'objectif est de bien comprendre l'implémentation des méthodes, avant de
-s'attaquer au problème complet. On s'intéressera à une seule des équations, 
+s'attaquer au problème complet. On s'intéressera d'abord à l'équation sur c, 
 dans le domaine 1D [0,1], en fixant l'autre inconnue à une valeur choisie (pas forcément constante).
 
 1.  Détailler l'architecture du code à implémenter, en essayant d'avoir un code
