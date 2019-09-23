@@ -101,4 +101,4 @@ aurons donc deux inconnues par point de discrétisation.
 
 ## refs
 
-À compléter dans le répertoire [./refs](./refs)
+À compléter dans le répertoire [./refs](./refs).
