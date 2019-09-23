@@ -103,3 +103,5 @@ aurons donc deux inconnues par point de discrétisation.
 ## refs
 
 À compléter dans le répertoire [./refs](./refs).
+- livre de A. Tveito et R. Winther, disponible en ligne via Babord+
+  https://babordplus.hosted.exlibrisgroup.com/permalink/f/165335h/TN_springer_s3-540-26740-9_47993
